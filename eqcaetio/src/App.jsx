@@ -1,16 +1,35 @@
-import Button from "./components/Button";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Principes from "./components/Principes";
-import Cabinets from "./components/Cabinets";
+import Modalites from "./components/Modalites";
+import BackToTop from "./components/BackToTop";
+import A_propos from "./components/A_propos";
+import Metiers from "./components/Metiers";
+import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 200);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
     <div className="min-h-screen bg-purple-500">
-      <Navbar />
-      <Hero />
-      <Principes />
-      <Cabinets />
+      <div id="top"><Navbar scrolled={scrolled} /></div>
+      <div id="hero" className="scroll-mt-16"><Hero /></div>
+      <div id="mod" className="scroll-mt-16"><Modalites /></div>
+      <div id="metiers" className="scroll-mt-8"><Metiers /></div>
+      <div id="about" className="-scroll-mt-18"><A_propos /></div>
+      <div> <Footer /></div>
+      <div><BackToTop visible={scrolled} /></div>
     </div>
   );
 }
