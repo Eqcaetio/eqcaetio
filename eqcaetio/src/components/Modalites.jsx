@@ -37,7 +37,7 @@ export default function Modalites() {
         {/* Piffonds */}
         <div className="card bg-purple-600 w-72 shadow-sm">
           <figure>
-            <img src={Piffonds} alt="Carte" />
+            <img src={Piffonds} alt="Piffonds" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">
@@ -62,7 +62,7 @@ export default function Modalites() {
         {/* Sens */}
         <div className="card bg-purple-600 w-72 shadow-sm">
           <figure>
-            <img src={Erables} alt="Carte" />
+            <img src={Erables} alt="Erables" />
           </figure>
           <div className="card-body">
             <h2 className="card-title">

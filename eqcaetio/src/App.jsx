@@ -26,8 +26,8 @@ export default function App() {
       <div id="top"><Navbar scrolled={scrolled} /></div>
       <div id="hero" className="scroll-mt-16"><Hero /></div>
       <div id="mod" className="scroll-mt-16"><Modalites /></div>
-      <div id="metiers" className="scroll-mt-8"><Metiers /></div>
-      <div id="about" className="-scroll-mt-18"><A_propos /></div>
+      <div id="metiers"><Metiers /></div>
+      <div id="about" className="-scroll-mt-6"><A_propos /></div>
       <div> <Footer /></div>
       <div><BackToTop visible={scrolled} /></div>
     </div>

@@ -43,7 +43,7 @@ export default function Hero2() {
 
             <div className="flex items-center justify-center gap-4 mt-4">
               <Button onClick={() => scrollToSection("mod")}>Consultation</Button>
-              <Button onClick={() => scrollToSection("way")}>Metiers</Button>
+              <Button onClick={() => scrollToSection("metiers")}>Métiers</Button>
               <Button onClick={() => scrollToSection("about")}>À propos</Button>
             </div>
           </div>
